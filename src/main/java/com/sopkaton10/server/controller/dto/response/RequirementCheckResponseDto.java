@@ -11,7 +11,7 @@ public class RequirementCheckResponseDto {
 
     private Long id;
     private boolean status;
-    private RequirementResponseDto requirementResponseDto;
+    private RequirementResponseDto detail;
 
     public static RequirementCheckResponseDto of(Long id,boolean status,RequirementResponseDto requirementResponseDto){
         return new RequirementCheckResponseDto(id,status,requirementResponseDto);

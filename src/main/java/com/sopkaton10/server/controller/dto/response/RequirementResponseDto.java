@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class RequirementResponseDto {
-    private Long id;
+    private Long checkId;
     private String title;
     private String content;
 
