@@ -21,7 +21,7 @@ public class Requirement {
 
     private String url;
 
-    private String requireName;
+    private String name;
 
     private String content;
 }
