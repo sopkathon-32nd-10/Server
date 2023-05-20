@@ -8,7 +8,7 @@ import com.sopkaton10.server.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 
 @RequestMapping("/user")
@@ -25,8 +25,11 @@ public class UserController {
         return ApiResponse.success(Success.GET_SUCCESS, userService.getUserInfo(userId));
     }
 
+    /**
+     * [POST] 근로 기준 적합 계산
+     */
     @PostMapping
-    public ApiResponse postWorkStandard(@RequestBody WorkStandardRequestDto request) {
+    public ApiResponse postWorkStandard(@RequestBody @Valid final WorkStandardRequestDto request) {
         return ApiResponse.success(Success.GET_SUCCESS, userService.postWorkStandard(request.getMonthOfWage(),
                                                                                     request.getWorkingHours(),
                                                                                     request.getMonthOfWorkingDays()));
