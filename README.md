@@ -70,7 +70,7 @@
 |Programming Language|<img alt="RED" src ="https://img.shields.io/badge/JAVA-004027.svg?&style=for-the-badge&logo=Jameson&logoColor=white"/>|
 |API|![REST](https://img.shields.io/badge/Rest-4B3263?style=for-the-badge&logo=rest&logoColor=white)                                     
 |Version Control|![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
-|CI/CD|![Jenkins](https://img.shields.io/badge/Jenkins-%D24939.svg?style=for-the-badge&logo=Jenkins&logoColor=white)|
+
 <br />
 
 
