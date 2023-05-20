@@ -13,7 +13,7 @@ public class RequirementCheckResponseDto {
     private boolean status;
     private RequirementResponseDto requirementResponseDto;
 
-    public RequirementCheckResponseDto of(Long id,boolean status,RequirementResponseDto requirementResponseDto){
+    public static RequirementCheckResponseDto of(Long id,boolean status,RequirementResponseDto requirementResponseDto){
         return new RequirementCheckResponseDto(id,status,requirementResponseDto);
     }
 }

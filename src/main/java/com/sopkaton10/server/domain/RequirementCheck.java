@@ -17,7 +17,7 @@ public class RequirementCheck {
     @Column(name="requirementCheck_id")
     private Long id;
 
-    private boolean status;
+    public boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "requirement_id")
@@ -33,5 +33,6 @@ public class RequirementCheck {
         this.status=status;
         this.user=user;
     }
+
 
 }
