@@ -16,7 +16,10 @@ public enum Success {
     /**
      * 200 OK
      */
-    GET_SUCCESS(HttpStatus.OK, "조회에 성공했습니다.");
+    GET_SUCCESS(HttpStatus.OK, "조회에 성공했습니다."),
+
+    PATCH_SUCCESS(HttpStatus.NO_CONTENT,"체크 변경에 성공했습니다");
+
 
     private final HttpStatus httpStatus;
     private final String message;
