@@ -1,13 +1,8 @@
 package com.sopkaton10.server.controller.dto.response;
 
-import com.sopkaton10.server.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 
 @Getter
 @AllArgsConstructor
@@ -20,16 +15,13 @@ public class UserResponseDto {
     private String workspace;
     private Long workingMonths;
 
-    public static UserResponseDto of(User user) {
-        String birth = user.getBirth().format(DateTimeFormatter.ofPattern("yyyy.MM.dd"));
-        Long workingMonths = Period.between(user.getEmploymentDate(), LocalDate.now()).toTotalMonths();
-
+    public static UserResponseDto of(String name, String birth, String nationality, String profileImg, String workspace, Long workingMonths) {
         return UserResponseDto.builder()
-                .name(user.getName())
+                .name(name)
                 .birth(birth)
-                .nationality(user.getNationality())
-                .profileImg(user.getProfileImg())
-                .workspace(user.getWorkspace())
+                .nationality(nationality)
+                .profileImg(profileImg)
+                .workspace(workspace)
                 .workingMonths(workingMonths)
                 .build();
     }
