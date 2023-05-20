@@ -22,5 +22,8 @@ public class RequirementCheck {
     @JoinColumn(name = "requirement_id")
     private Requirement requirement;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
 }
