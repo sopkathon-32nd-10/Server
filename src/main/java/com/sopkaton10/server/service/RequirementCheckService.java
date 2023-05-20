@@ -51,7 +51,7 @@ public class RequirementCheckService {
     @Transactional
     public void fixStatus(RequireCheckRequestDto requireCheckRequestDto,Long userId){
         User user=userRepository.findById(userId).orElseThrow(() -> new NotFoundException(NOT_FOUND_USER_EXCEPTION, NOT_FOUND_USER_EXCEPTION.getMessage()));
-        RequirementCheck requirementCheck=requirementCheckRepository.findByUserAndId(user,requireCheckRequestDto.getCheckId()).orElseThrow(() -> new NotFoundException(REQUEST_VALIDATION_EXCEPTION, "유효하지 않은 질문 ID 값입니다."));
+        RequirementCheck requirementCheck=requirementCheckRepository.findByUserAndId(user,requireCheckRequestDto.getCheckId()).orElseThrow(() -> new NotFoundException(REQUEST_VALIDATION_EXCEPTION, "유효하지 않은 체크 ID 값입니다."));
         requirementCheck.setStatus(requireCheckRequestDto.isStatus());
         requirementCheckRepository.save(requirementCheck);
     }
