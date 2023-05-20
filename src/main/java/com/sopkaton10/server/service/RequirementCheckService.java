@@ -1,5 +1,6 @@
 package com.sopkaton10.server.service;
 
+import com.sopkaton10.server.controller.dto.request.RequireCheckRequestDto;
 import com.sopkaton10.server.controller.dto.response.RequirementCheckResponseDto;
 import com.sopkaton10.server.controller.dto.response.RequirementResponseDto;
 import com.sopkaton10.server.domain.Requirement;
@@ -31,5 +32,12 @@ public class RequirementCheckService {
             requireList.add(RequirementCheckResponseDto.of(requirementcheck.getId(),requirementcheck.getUser().isWorkStatus(), RequirementResponseDto.of(requirement.getId(),requirement.getContent(),requirement.getTitle())));
         }
         return requireList;
+    }
+
+    public void fixStatus(RequireCheckRequestDto requireCheckRequestDto){
+        User user=userRepository.findById(requireCheckRequestDto.getUserId()).get();
+        RequirementCheck requirementCheck=requirementCheckRepository.findByUserAndId(user,requireCheckRequestDto.getCheckId());
+        requirementCheck.setStatus(requireCheckRequestDto.isStatus());
+        requirementCheckRepository.save(requirementCheck);
     }
 }

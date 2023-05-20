@@ -34,5 +34,8 @@ public class RequirementCheck {
         this.user=user;
     }
 
+    public void setStatus(boolean status){
+        this.status=status;
+    }
 
 }
