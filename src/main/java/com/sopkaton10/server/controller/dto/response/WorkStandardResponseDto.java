@@ -7,8 +7,7 @@ import lombok.*;
 @Builder
 @Setter
 public class WorkStandardResponseDto {
-    private String stdResult;
-    private String stdResultImg;
+    private boolean stdResult;
     private boolean workingHoursStd;
     private int workingHours;
     private boolean wageStd;

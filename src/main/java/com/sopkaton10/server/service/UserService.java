@@ -3,7 +3,6 @@ package com.sopkaton10.server.service;
 import com.sopkaton10.server.controller.dto.response.UserResponseDto;
 import com.sopkaton10.server.controller.dto.response.WorkStandardResponseDto;
 import com.sopkaton10.server.domain.User;
-import com.sopkaton10.server.domain.WageResult;
 import com.sopkaton10.server.exception.model.NotFoundException;
 import com.sopkaton10.server.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -42,13 +41,7 @@ public class UserService {
         response.setWage(hourOfWage);
         response.setWageStd(hourOfWage>=standardWage);
 
-        if(response.isWorkingHoursStd() && response.isWageStd() ) {
-            response.setStdResult(WageResult.SUCCESS.getName());
-            response.setStdResultImg(WageResult.SUCCESS.getImg());
-        } else {
-            response.setStdResult(WageResult.FAIL.getName());
-            response.setStdResultImg(WageResult.FAIL.getImg());
-        }
+        response.setStdResult(response.isWorkingHoursStd() && response.isWageStd());
         return response;
     }
 }
