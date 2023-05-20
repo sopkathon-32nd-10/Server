@@ -1,2 +1,4 @@
-package com.sopkaton10.server.service;public class RequirementCheckService {
+package com.sopkaton10.server.service;
+
+public class RequirementCheckService {
 }
