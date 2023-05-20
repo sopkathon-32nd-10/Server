@@ -29,15 +29,6 @@ public class ControllerExceptionAdvice {
     }
 
     /**
-     * 500 Internal Server
-     */
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(Exception.class)
-    protected ApiResponse<Object> handleException(final Exception e) {
-        return ApiResponse.error(Error.INTERNAL_SERVER_ERROR);
-    }
-
-    /**
      * Sopt custom error
      */
     @ExceptionHandler(SoptException.class)
