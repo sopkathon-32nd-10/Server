@@ -12,4 +12,5 @@ public interface RequirementRepository extends Repository<Requirement,Long> {
 
     List<Requirement> findAll();
 
+    Requirement findById(Long id);
 }

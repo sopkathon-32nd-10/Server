@@ -20,16 +20,13 @@ public class Requirement {
     @Column(name="requirement_id")
     private Long id;
 
-    private String url;
-
-    private String name;
+    private String title;
 
     private String content;
 
     @Builder
-    public Requirement(String url,String name,String content){
-        this.url=url;
-        this.name=name;
+    public Requirement(String title,String content){
+        this.title=title;
         this.content=content;
     }
 }

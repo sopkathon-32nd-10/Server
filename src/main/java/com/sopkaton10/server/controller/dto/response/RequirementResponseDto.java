@@ -8,10 +8,10 @@ import lombok.Getter;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class RequirementResponseDto {
     private Long id;
-    private String url;
+    private String title;
     private String content;
 
-    public static RequirementResponseDto of(Long id,String url,String content){
-        return new RequirementResponseDto(id,url,content);
+    public static RequirementResponseDto of(Long id,String content,String title){
+        return new RequirementResponseDto(id,title,content);
     }
 }
