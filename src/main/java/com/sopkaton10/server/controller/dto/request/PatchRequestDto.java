@@ -4,10 +4,11 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.List;
+
 @Getter
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
-public class RequireCheckRequestDto {
+public class PatchRequestDto {
 
-    private Long checkId;
-    private boolean status;
+    List<RequireCheckRequestDto> requireList;
 }

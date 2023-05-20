@@ -1,14 +1,14 @@
 package com.sopkaton10.server.controller;
 
 import com.sopkaton10.server.common.dto.ApiResponse;
+import com.sopkaton10.server.controller.dto.request.PatchRequestDto;
+import com.sopkaton10.server.controller.dto.request.RequireCheckRequestDto;
 import com.sopkaton10.server.controller.dto.response.RequirementCheckResponseDto;
 import com.sopkaton10.server.exception.Success;
 import com.sopkaton10.server.exception.Error;
 import com.sopkaton10.server.service.RequirementCheckService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +28,15 @@ public class RequireController {
             return ApiResponse.error(Error.NOT_FOUND_USER_EXCEPTION);
         }
         return ApiResponse.success(Success.GET_SUCCESS,requireList);
+    }
+
+    @PatchMapping("/checklist")
+    public ApiResponse patchChecklist(@RequestParam(required = false) final Long userId,@RequestBody RequireCheckRequestDto require){
+
+
+        requirementCheckService.fixStatus(require,userId);
+
+
+        return ApiResponse.success(Success.PATCH_SUCCESS);
     }
 }
