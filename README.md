@@ -2,13 +2,24 @@
 ## 🔉 프로젝트 소개 
 
 
-## 📱 아이고사장님~!
+## 📱 I Go Boss/아이고 사장님은 
+외국인 노동자의 근로와 관련된 문제을 해결하고 
 
-아이고 사장님~ 아이고 사장님~ 아이고 사장님~ 아이고 사장님~
+자신의 근로내역을 입력해 적절한 임금과 노동시간을 지키고 있는지 확인
+근로에 필요한 서류를 체크리스트를 통해 확인할 수 있게
+ 함으로써 
+자신의 노동 권리가 적법하게 지켜지고 있는지, 근로를 위해 어떤 서류를 준비해야하는지 확인하고싶은 
+외국인 노동자들에게 유용하다.
 
 
 
 ## 👩🏻‍💻 팀원 소개
+
+<div style="max-width: 300px;">
+
+<img style="width:300px" src="https://github.com/sopkathon-32nd-10/Server/assets/39684920/3c587abb-e066-46fb-bc2b-d48d4ace9bb4"/>
+	
+</div>
 
 <table>
     <tr align="center">
@@ -36,22 +47,14 @@
 
 협업 노션: [https://www.notion.so/go-sopt/CDS-TEAM_5-SERVER-cae33108857144779c36a0ae0be313fd?pvs=4](https://go-sopt.notion.site/7f4db09cda9f48be94f83314a9ac99da)
 
-## 📱 프로젝트
+![image](https://github.com/sopkathon-32nd-10/Server/assets/39684920/e3563d5f-a77c-4425-abb7-31b5bcf3488c)
 
-### 🧐 
-??
+## 📱 ERD
 
-### 🍓 
-??
 
-### 💊 
-?
-
-### 🩺
-?
 <br />
+<img width="881" alt="스크린샷 2023-05-21 오전 12 30 18" src="https://github.com/sopkathon-32nd-10/Server/assets/39684920/853579fa-5e9f-4419-855f-afe8870378f3">
 
-![image](https://github.com/GOSOPT-CDS-TEAM-APP5/Server/assets/39684920/5738b936-98bf-4c01-90fa-dc707e93b700)
 
 <hr/>
 <br />
@@ -247,3 +250,5 @@ public final String POSTAL_CODE_EXPRESSION = “POST”;
 private boolean authorized;
 private int accessToken;
 ```
+
+
