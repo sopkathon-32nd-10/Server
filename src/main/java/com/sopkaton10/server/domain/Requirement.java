@@ -1,6 +1,7 @@
 package com.sopkaton10.server.domain;
 
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -24,4 +25,11 @@ public class Requirement {
     private String name;
 
     private String content;
+
+    @Builder
+    public Requirement(String url,String name,String content){
+        this.url=url;
+        this.name=name;
+        this.content=content;
+    }
 }
