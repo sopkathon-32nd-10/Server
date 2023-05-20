@@ -1,6 +1,7 @@
 package com.sopkaton10.server.service;
 
 import com.sopkaton10.server.controller.dto.request.RequireCheckRequestDto;
+import com.sopkaton10.server.controller.dto.response.CheckListResponseDto;
 import com.sopkaton10.server.controller.dto.response.RequirementCheckResponseDto;
 import com.sopkaton10.server.controller.dto.response.RequirementResponseDto;
 import com.sopkaton10.server.domain.Requirement;
@@ -28,17 +29,23 @@ import static com.sopkaton10.server.exception.Error.REQUEST_VALIDATION_EXCEPTION
 public class RequirementCheckService {
     private final RequirementCheckRepository requirementCheckRepository;
     private final UserRepository userRepository;
-    public List<RequirementCheckResponseDto> getRequire(Long userId){
+    public CheckListResponseDto getRequire(Long userId){
         User user=userRepository.findById(userId).orElseThrow(() -> new NotFoundException(NOT_FOUND_USER_EXCEPTION, NOT_FOUND_USER_EXCEPTION.getMessage()));
 
         List<RequirementCheck> checkList=requirementCheckRepository.findAllByUser(user);
         List<RequirementCheckResponseDto> requireList=new ArrayList<>();
+        float progress=0;
         for (RequirementCheck requirementcheck:checkList
              ) {
+            if(requirementcheck.isStatus()==true){
+                progress++;
+            }
             Requirement requirement=requirementcheck.getRequirement();
             requireList.add(RequirementCheckResponseDto.of(requirementcheck.getId(),requirementcheck.isStatus(), RequirementResponseDto.of(requirement.getId(),requirement.getContent(),requirement.getTitle())));
         }
-        return requireList;
+       progress=progress/checkList.size()*100;
+
+        return CheckListResponseDto.of((int)progress,requireList);
     }
 
     @Transactional
