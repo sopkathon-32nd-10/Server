@@ -1,6 +1,7 @@
 package com.sopkaton10.server.domain;
 
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -25,5 +26,13 @@ public class RequirementCheck {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Builder
+    public RequirementCheck(boolean status,Requirement requirement,User user){
+        this.requirement=requirement;
+        this.status=status;
+        this.user=user;
+    }
+
 
 }
