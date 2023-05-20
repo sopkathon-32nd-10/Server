@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -18,7 +18,7 @@ public class User {
 
     private String name;
 
-    private LocalDateTime birth;
+    private LocalDate birth;
 
     private String nationality;
 
@@ -26,7 +26,7 @@ public class User {
 
     private String workspace;
 
-    private LocalDateTime employmentDate;
+    private LocalDate employmentDate;
 
     private boolean workStatus;
 }
