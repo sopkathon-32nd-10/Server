@@ -22,7 +22,7 @@ public class RequirementCheckService {
     private final RequirementCheckRepository requirementCheckRepository;
     private final UserRepository userRepository;
     public List<RequirementCheckResponseDto> getRequire(Long userId){
-        User user=userRepository.findById(userId);
+        User user=userRepository.findById(userId).get();
         List<RequirementCheck> checkList=requirementCheckRepository.findAllByUser(user);
         List<RequirementCheckResponseDto> requireList=new ArrayList<>();
         for (RequirementCheck requirementcheck:checkList

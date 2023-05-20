@@ -12,7 +12,7 @@ public enum Success {
 
 //    **200*20
 
-    GET_SUCCESS(HttpStatus.OK,"조회에 성공했습니다"),
+
     /**
      * 200 OK
      */
