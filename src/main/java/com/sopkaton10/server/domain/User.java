@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -14,5 +15,19 @@ public class User {
     @GeneratedValue
     @Column(name="user_id")
     private Long id;
+
+    private String name;
+
+    private LocalDateTime birth;
+
+    private String nationality;
+
+    private String profileImg;
+
+    private String workspace;
+
+    private LocalDateTime employmentDate;
+
+    private boolean workStatus;
 }
 
