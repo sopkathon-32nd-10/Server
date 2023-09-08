@@ -49,15 +49,7 @@
 
 ![image](https://github.com/sopkathon-32nd-10/Server/assets/39684920/e3563d5f-a77c-4425-abb7-31b5bcf3488c)
 
-## 📱 ERD
 
-
-<br />
-<img width="881" alt="스크린샷 2023-05-21 오전 12 30 18" src="https://github.com/sopkathon-32nd-10/Server/assets/39684920/853579fa-5e9f-4419-855f-afe8870378f3">
-
-
-<hr/>
-<br />
 
 
 ## 🛠 기술 스택
